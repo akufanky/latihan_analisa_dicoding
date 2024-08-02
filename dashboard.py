@@ -35,7 +35,7 @@ def create_byage_df(df):
     byage_df.rename(columns={
         'customer_id': 'customer_count'
     },inplace=True)
-    byage_df['age_group'] = pd.Categorical(byage_df['age_group'], ['Youth', 'Adults', 'Seniors'])
+    byage_df['age_group'] = pd.Categorical(byage_df['age_group'], categories=['Youth', 'Adults', 'Seniors'], ordered=True)
 
     return byage_df
 
